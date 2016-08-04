@@ -64,9 +64,11 @@ reload@1.1.10
 retry@1.0.8
 routepolicy@1.0.11
 seba:minifiers-autoprefixer@1.0.1
+session@1.0.5
 spacebars@1.0.12
 spacebars-compiler@1.0.12
 standard-minifier-js@1.1.8
+steeve:jquery-qrcode@0.2.2
 templating@1.1.14
 templating-tools@1.0.4
 tracker@1.1.0

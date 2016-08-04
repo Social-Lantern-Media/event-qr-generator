@@ -1,9 +1,8 @@
 /*
  * This file imports all collections
- * and their respective serverside 
+ * and their respective serverside
  */
 
-// Example Module
+// Registrations Module
 
-import '../../api/example/example.js';
-import '../../api/example/server/publications.js';
+import '../../api/registrations/methods.js';

@@ -19,3 +19,6 @@ ecmascript@0.5.7              # Enable ECMAScript2015+ syntax in app code
 iron:router
 seba:minifiers-autoprefixer
 fourseven:scss
+steeve:jquery-qrcode
+random
+session

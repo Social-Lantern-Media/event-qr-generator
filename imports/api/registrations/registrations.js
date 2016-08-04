@@ -2,9 +2,9 @@
 
 import { Mongo } from 'meteor/mongo';
 
-export const Example = new Mongo.Collection('example');
+export const Registrations = new Mongo.Collection('registrations');
 
-Example.deny({
+Registrations.deny({
   insert() { return true; },
   update() { return true; },
   remove() { return true; }
