@@ -1,1 +1,5 @@
+# METEOR
 node_modules/
+
+# OSX SYSTEM
+*.DS_Store
