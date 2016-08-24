@@ -4,6 +4,15 @@ import { Template } from 'meteor/templating';
 import { Router } from 'meteor/iron:router';
 import { Session } from 'meteor/session';
 
+Template.page_register.helpers({
+  "projectTitle": function() {
+    return Meteor.settings.public.project.title;
+  },
+  "projectSubTitle": function() {
+    return Meteor.settings.public.project.subtitle;
+  }
+})
+
 Template.page_register.onRendered(() => {
   $(".form-field input[type='text'], .form-field input[type='email']").change(function() {
     if($(this).val()) {

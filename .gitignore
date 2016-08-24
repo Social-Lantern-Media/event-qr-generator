@@ -1,5 +1,7 @@
 # METEOR
+npm-debug.log
 node_modules/
+settings.json
 
 # OSX SYSTEM
 *.DS_Store
