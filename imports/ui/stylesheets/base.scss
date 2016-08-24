@@ -1,1 +1,4 @@
-// Place your main SCSS here!
+@import './partials/mixins/_mixins.scss';
+
+@import './partials/general/_variables.scss';
+@import './partials/general/_layout.scss';
