@@ -1,0 +1,18 @@
+app:
+  container_name: 'eventqr-app'
+  image: larsvh/meteor:latest
+  links:
+    - mongo
+  expose:
+    - '80'
+  volumes:
+    - './app:/src'
+  environment:
+    - APP_ENV=production
+    - MONGO_URL=mongodb://mongo/eventqr
+    - ROOT_URL=http://eventqr.larsvanherk.com
+    - PORT=80
+    - VIRTUAL_HOST=eventqr.larsvanherk.com
+
+mongo:
+  container_name: 'eventqr-mongo'
