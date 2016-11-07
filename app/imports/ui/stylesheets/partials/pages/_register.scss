@@ -1,0 +1,64 @@
+.container-body {
+  .register-form {
+    .form-field {
+      position: relative;
+      height: calc(2.4em + 21px);
+      padding: 10px;
+
+      &:last-child {
+        height: auto;
+      }
+
+      label, input {
+        display: block;
+      }
+
+      label {
+        position: absolute;
+        top: 1.65em;
+        left: 15px;
+        color: $text-light;
+        font-size: 1em;
+
+        transition: color .1s ease, top .1s ease;
+
+        &.labelActive {
+          top: -0.1em;
+          color: $text-dark;
+        }
+
+        &.optional:after {
+          content: ' - optioneel';
+          color: $text-light !important;
+          font-size: .7em;
+          font-style: italic;
+        }
+      }
+
+      input {
+        width: 100%;
+        border: none;
+        box-sizing: border-box;
+        outline: none;
+
+        padding: 5px;
+        margin: 5px 0;
+        font-family: $fonts-main;
+        font-size: 1.3em;
+        border-bottom: 1px solid $secondary-light;
+        transition: border .1s ease;
+
+        background: inherit;
+
+        &:focus {
+          border-bottom: 3px solid $secondary;
+
+          & ~ label {
+            top: -0.1em;
+            color: $text-dark;
+          }
+        }
+      }
+    }
+  }
+}

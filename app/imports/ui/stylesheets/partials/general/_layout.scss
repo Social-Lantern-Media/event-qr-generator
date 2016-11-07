@@ -34,105 +34,42 @@ body {
   }
 
   .container-body {
-    .register-form {
-      .form-field {
-        position: relative;
-        height: calc(2.4em + 21px);
-        padding: 10px;
+    .button {
+      position: relative;
+      width: 100%;
+      padding: 10px;
+      z-index: 1;
+      box-sizing: border-box;;
 
-        &:last-child {
-          height: auto;
-        }
+      background: none;
+      color: $secondary;
+      text-align: center;
+      cursor: pointer;
+      overflow: hidden;
+      border: 1px solid $secondary;
+      transition: color .2s ease;
 
-        label, input {
-          display: block;
-        }
+      &::after {
+        content: '';
+        display: inline-block;
 
-        label {
-          position: absolute;
-          top: 1.65em;
-          left: 15px;
-          color: $text-light;
-          font-size: 1em;
+        position: absolute;
+        top: 0;
+        right: calc(100% + 10px);
+        bottom: 0;
+        left: -10px;
+        z-index: -1;
 
-          transition: color .1s ease, top .1s ease;
+        background: $secondary;
+        transform: skewX(10deg);
+        transition: right .2s ease;
+      }
 
-          &.labelActive {
-            top: -0.1em;
-            color: $text-dark;
-          }
+      &:hover {
+        color: white;
 
-          &.optional:after {
-            content: ' - optioneel';
-            color: $text-light !important;
-            font-size: .7em;
-            font-style: italic;
-          }
-        }
-
-        input {
-          width: 100%;
-          border: none;
-          box-sizing: border-box;
-          outline: none;
-
-          padding: 5px;
-          margin: 5px 0;
-          font-family: $fonts-main;
-          font-size: 1.3em;
-          border-bottom: 1px solid $secondary-light;
-          transition: border .1s ease;
-
-          background: inherit;
-
-          &:focus {
-            border-bottom: 3px solid $secondary;
-
-            & ~ label {
-              top: -0.1em;
-              color: $text-dark;
-            }
-          }
-        }
-
-        .form-submit {
-          position: relative;
-          width: 100%;
-          padding: 10px;
-          z-index: 1;
-          box-sizing: border-box;;
-
-          background: none;
-          color: $secondary;
-          text-align: center;
-          cursor: pointer;
-          overflow: hidden;
-          border: 1px solid $secondary;
-          transition: color .2s ease;
-
-          &::after {
-            content: '';
-            display: inline-block;
-
-            position: absolute;
-            top: 0;
-            right: calc(100% + 10px);
-            bottom: 0;
-            left: -10px;
-            z-index: -1;
-
-            background: $secondary;
-            transform: skewX(10deg);
-            transition: right .2s ease;
-          }
-
-          &:hover {
-            color: white;
-
-            &::after {
-              right: -5px;
-            }
-          }
+        &::after {
+          right: -5px;
         }
       }
     }

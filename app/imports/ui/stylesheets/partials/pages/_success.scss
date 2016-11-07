@@ -1,0 +1,11 @@
+.container-body {
+  .qr-code {
+    margin-bottom: 50px;
+    text-align: center;
+
+    canvas {
+      display: inline-block;
+      margin: auto;
+    }
+  }
+}
